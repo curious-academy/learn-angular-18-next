@@ -1,0 +1,12 @@
+<!-- @if(videoGameList.length > 0)
+{ -->
+
+<dtbc-table-games
+      title="Liste des mes jeux-vidéos"
+      [items]="videoGameList"
+      (toCreate)="prepareCreation()"
+></dtbc-table-games>
+
+@if(readyToCreate()) {
+  <dtbc-create-video-game></dtbc-create-video-game>
+}

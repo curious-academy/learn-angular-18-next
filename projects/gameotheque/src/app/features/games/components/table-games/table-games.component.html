@@ -1,0 +1,21 @@
+
+<h2>{{ title() }}</h2>
+<table>
+  <tbody>
+    @for (videoGame of items(); track videoGame.nom) {
+    <tr>
+      <td>
+        {{ videoGame.nom }}
+      </td>
+      <td>
+        {{ videoGame.dateSortie }}
+      </td>
+    </tr>
+    }
+    @empty {
+      <td>Aucune ligne</td>
+    }
+  </tbody>
+</table>
+
+<button (click)="clickToAddNewVideoGame()">Nouveau jeu-vidéo</button>
