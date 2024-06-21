@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { VideoGame } from '../../models/video-game';
 import { TableGamesComponent } from '../table-games/table-games.component';
 import { CreateVideoGameComponent } from '../create-video-game/create-video-game.component';
+import { GetAllVideoGamesService } from '../../services/get-all-video-games.service';
 
 @Component({
   selector: 'app-list-games',
@@ -11,6 +12,7 @@ import { CreateVideoGameComponent } from '../create-video-game/create-video-game
   styleUrl: './list-games.component.css'
 })
 export class ListGamesComponent {
+  private readonly service = inject(GetAllVideoGamesService);
   readyToCreate = signal<boolean>(false);
   // videoGameList: VideoGame[] = []
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ListGamesComponent } from './features/games/components/list-games/list-games.component';
 
@@ -10,5 +10,5 @@ import { ListGamesComponent } from './features/games/components/list-games/list-
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'gameotheque';
+  title = signal('gameotheque');
 }
