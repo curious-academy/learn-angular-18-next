@@ -3,11 +3,12 @@ import { VideoGame } from '../../models/video-game';
 import { TableGamesComponent } from '../table-games/table-games.component';
 import { CreateVideoGameComponent } from '../create-video-game/create-video-game.component';
 import { GetAllVideoGamesService } from '../../services/get-all-video-games.service';
+import { MainFiltersComponent } from '../main-filters/main-filters.component';
 
 @Component({
   selector: 'app-list-games',
   standalone: true,
-  imports: [TableGamesComponent, CreateVideoGameComponent],
+  imports: [TableGamesComponent, CreateVideoGameComponent, MainFiltersComponent],
   templateUrl: './list-games.component.html',
   styleUrl: './list-games.component.css'
 })
