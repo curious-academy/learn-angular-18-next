@@ -8,6 +8,10 @@
   <mat-icon>more_vert</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="goToUrl('')">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
   <button mat-menu-item (click)="goToUrl('video-games')">
     <mat-icon>sports_esports</mat-icon>
     <span>Mes jeux-vidéos</span>

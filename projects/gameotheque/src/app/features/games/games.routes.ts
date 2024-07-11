@@ -3,7 +3,7 @@ import { ListGamesComponent } from "./components/list-games/list-games.component
 
 export const gamesRoutes: Routes = [
   {
-    path: 'video-games',
+    path: '',
     component: ListGamesComponent
   }
 ]
