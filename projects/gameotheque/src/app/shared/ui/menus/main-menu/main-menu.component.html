@@ -1,0 +1,19 @@
+<!-- <ul>
+  <li>
+    <a [routerLink]="['video-games', 1]">Mes jeux-vidéos</a>
+  </li>
+</ul> -->
+
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="goToUrl('video-games')">
+    <mat-icon>sports_esports</mat-icon>
+    <span>Mes jeux-vidéos</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>
+</mat-menu>
