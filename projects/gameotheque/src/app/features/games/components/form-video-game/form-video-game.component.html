@@ -1,23 +1,25 @@
-<form (ngSubmit)="submitToSave()">
+<form #videogameForm="ngForm" (ngSubmit)="submitToSave()">
   <div class="row">
     <div class="col">
       <mat-form-field appearance="fill">
         <mat-label>Nom</mat-label>
-        <input name="name" matInput placeholder="Nom" [(ngModel)]="item.nom">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <input required name="name" matInput placeholder="Nom" [(ngModel)]="item.nom">
+        <mat-icon matSuffix>{{ inputIcon() }}</mat-icon>
       </mat-form-field>
     </div>
     <div class="col">
-      <mat-form-field appearance="fill">
+      <mat-form-field>
         <mat-label>Date de sortie</mat-label>
-        <input type="date" name="releaseDate" matInput placeholder="Date" [(ngModel)]="item.releaseDate">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <input name="releaseDate" matInput [matDatepicker]="picker" [(ngModel)]="item.releaseDate">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <button mat-flat-button >Sauvegarder</button>
+      <button mat-flat-button [disabled]="!videogameForm.form.valid">Sauvegarder</button>
     </div>
   </div>
 </form>
