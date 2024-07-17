@@ -1,0 +1,23 @@
+<form (ngSubmit)="submitToSave()">
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input name="name" matInput placeholder="Nom" [(ngModel)]="item.nom">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Date de sortie</mat-label>
+        <input type="date" name="releaseDate" matInput placeholder="Date" [(ngModel)]="item.releaseDate">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button mat-flat-button >Sauvegarder</button>
+    </div>
+  </div>
+</form>

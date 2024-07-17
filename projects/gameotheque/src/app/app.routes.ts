@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { gamesRoutes } from './features/games/games.routes';
+import { videoGamesRoutes } from './features/games/video-games.routes';
 import { MainComponent } from './pages/main/main.component';
 
 export const routes: Routes = [
@@ -14,7 +14,7 @@ export const routes: Routes = [
   // ... gamesRoutes
   {
     path: 'video-games',
-    children: gamesRoutes
+    children: videoGamesRoutes
     // loadChildren: () => import('./features/games/games.routes').then(item => item.gamesRoutes)
   }
 ];
