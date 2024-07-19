@@ -1,0 +1,7 @@
+.success-panel {
+  background-color: green;
+}
+
+.failed-panel {
+  background-color: darkred;
+}

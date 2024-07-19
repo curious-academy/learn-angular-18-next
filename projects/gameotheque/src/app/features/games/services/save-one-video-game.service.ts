@@ -10,6 +10,6 @@ export class SaveOneVideoGameService {
   private readonly http = inject(HttpClient)
 
   save(item: VideoGame): Observable<VideoGame> {
-    return this.http.post<VideoGame>('', item);
+    return this.http.post<VideoGame>('https://localhost:7269/api/Videogame', item);
   }
 }

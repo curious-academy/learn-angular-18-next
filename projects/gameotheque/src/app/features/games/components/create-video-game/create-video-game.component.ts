@@ -10,6 +10,9 @@ import {
   MatSnackBarLabel,
   MatSnackBarRef,
 } from '@angular/material/snack-bar';
+
+type StatePanel = 'success' | 'failed';
+
 @Component({
   selector: 'dtbc-create-video-game',
   standalone: true,
@@ -22,19 +25,19 @@ export class CreateVideoGameComponent {
   private readonly snackbar = inject(MatSnackBar)
   isSaving = signal(false);
 
-  openSnack(message: string) {
-    this.snackbar.open(message, '', { duration: 1000 })
+  openSnack(message: string, cssClass: StatePanel) {
+    this.snackbar.open(message, '', { duration: 1000, panelClass: cssClass })
   }
 
   saveOne(item: VideoGame): void {
     this.isSaving.set(true)
     this.service.save(item).subscribe({
       next: savedVideoGame => {
-        this.openSnack('Sauvegarde réussie !')
+        this.openSnack('Sauvegarde réussie !', 'success')
         this.isSaving.set(false)
       },
       error: err => {
-        this.openSnack('Oops prob lors de la sauvegarde')
+        this.openSnack('Oops prob lors de la sauvegarde', 'failed')
         this.isSaving.set(false)
       }
     })
