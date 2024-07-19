@@ -12,7 +12,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
   standalone: true,
   imports: [AsyncPipe, TableGamesComponent, CreateVideoGameComponent, MainFiltersComponent],
   templateUrl: './list-games.component.html',
-  styleUrl: './list-games.component.css'
+  styleUrl: './list-games.component.css',
+  // providers: [GetAllVideoGamesService] : local au composant / scoped / transient
 })
 export class ListGamesComponent {
   private readonly service = inject(GetAllVideoGamesService)

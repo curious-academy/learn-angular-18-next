@@ -20,7 +20,7 @@ export class GetAllVideoGamesService implements GetAllGames {
   private readonly httpClient = inject(HttpClient);
 
   getAll(): Observable<VideoGames> {
-    throw new Error('Method not implemented.');
+    throw new Error('Method not implemented.')
   }
 
 
