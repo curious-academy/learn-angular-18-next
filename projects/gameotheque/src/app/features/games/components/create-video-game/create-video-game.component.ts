@@ -30,7 +30,7 @@ export class CreateVideoGameComponent {
     this.isSaving.set(true)
     this.service.save(item).subscribe({
       next: savedVideoGame => {
-        console.info('Sauvegarde réussie !')
+        this.openSnack('Sauvegarde réussie !')
         this.isSaving.set(false)
       },
       error: err => {
