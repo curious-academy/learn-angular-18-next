@@ -1,0 +1,23 @@
+<form  [formGroup]="gameConsoleForm" (ngSubmit)="submitToSave()">
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input required name="name" matInput placeholder="Nom" formControlName="label">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Version</mat-label>
+        <input required name="version" matInput placeholder="Version" formControlName="version">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button mat-flat-button [disabled]="!gameConsoleForm.valid">Sauvegarder</button>
+    </div>
+  </div>
+</form>

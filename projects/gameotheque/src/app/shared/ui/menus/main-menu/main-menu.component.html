@@ -20,8 +20,12 @@
     <mat-icon>sports_esports</mat-icon>
     <span>Nouveau</span>
   </button>
-  <button mat-menu-item disabled>
-    <mat-icon>voicemail</mat-icon>
-    <span>Check voice mail</span>
+  <button mat-menu-item (click)="goToUrl('game-consoles')">
+    <mat-icon>sports_esports</mat-icon>
+    <span>Mes consoles</span>
+  </button>
+  <button mat-menu-item (click)="goToUrl('game-consoles/create')">
+    <mat-icon>sports_esports</mat-icon>
+    <span>Nouvelle console de jeu</span>
   </button>
 </mat-menu>
