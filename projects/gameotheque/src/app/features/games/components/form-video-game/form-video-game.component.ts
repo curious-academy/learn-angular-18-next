@@ -25,7 +25,7 @@ export class FormVideoGameComponent {
   inputIcon = signal('sentiment_very_satisfied')
 
   saveItem = output<VideoGame>()
-  item: VideoGame = {nom: 'Test jeu video', releaseDate: new Date()}
+  item: VideoGame = {label: 'Test jeu video', releaseDate: new Date()}
 
   submitToSave(): void {
     this.saveItem.emit(this.item)

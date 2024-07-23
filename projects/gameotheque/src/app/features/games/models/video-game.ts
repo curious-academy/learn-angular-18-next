@@ -2,7 +2,7 @@
  * Un jeu géré dans ma vidéothèque
  */
 export interface VideoGame {
-  nom: string;
+  label: string;
   releaseDate: Date
 }
 
