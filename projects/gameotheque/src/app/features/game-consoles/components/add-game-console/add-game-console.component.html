@@ -1,1 +1,8 @@
-<dtbc-form-game-console />
+<h1>Ajoute ta console</h1>
+
+@if(isSaving())
+{
+  <mat-spinner></mat-spinner>
+}
+
+<dtbc-form-game-console [item]="newItem" (toSave)="createOne($event)" />

@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(),
     provideExperimentalZonelessChangeDetection(),
-    //provideZoneChangeDetection({ eventCoalescing: true }),
+    // provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes), provideAnimationsAsync()
   ]
 };

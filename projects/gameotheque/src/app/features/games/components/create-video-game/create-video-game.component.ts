@@ -10,8 +10,7 @@ import {
   MatSnackBarLabel,
   MatSnackBarRef,
 } from '@angular/material/snack-bar';
-
-type StatePanel = 'success' | 'failed';
+import { StatePanel } from '../../../../core/custom-types';
 
 @Component({
   selector: 'dtbc-create-video-game',
