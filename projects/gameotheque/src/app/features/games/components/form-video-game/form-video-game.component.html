@@ -19,6 +19,18 @@
   </div>
   <div class="row">
     <div class="col">
+      <mat-form-field>
+        <mat-label>Console préférée</mat-label>
+        <mat-select [(ngModel)]="item.console.id" name="console">
+          @for (console of consoles$$(); track console.id) {
+           <mat-option [value]="console.id">{{console.label}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
       <button mat-flat-button [disabled]="!videogameForm.form.valid">Sauvegarder</button>
     </div>
   </div>
